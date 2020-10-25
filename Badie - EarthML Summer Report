@@ -18,72 +18,72 @@ to new research mates and making stronger connections with several friends; and 
 Below is a timeline of the main tasks I have joined throughout the first stage of this research, with key encounters and experiences listed as points:
 
 1- Literature Search: 
-- Reading & Summarizing more than 40 research papers
-- Learning about neural networks & seismology terms and concepts
-- Creating 3 GitHub WikiPages (Earthquake Detection ML - Denoising - Seismology) with brief summaries.
+* Reading & Summarizing more than 40 research papers
+* Learning about neural networks & seismology terms and concepts
+* Creating 3 GitHub WikiPages (Earthquake Detection ML - Denoising - Seismology) with brief summaries.
 
 
 2- Learning and Working with GitHub:
-- Pull Requests 
-- Forking 
-- Uploading Files and Notebooks
+* Pull Requests 
+* Forking 
+* Uploading Files and Notebooks
 
 
 3- Presenting STEAD Paper:
-- First Group-Based Task
-- First Presentation
+* First Group-Based Task
+* First Presentation
 
 
 4- Wavelet Transforms of Seismograms 
-- First encounter with Jupyter Notebooks and Anaconda 
-- First encounter with ObsPy and PyWavelets
-- New Scipy Commands
-- Downloading Waveform and Instrument Response Data from Kandilli
-- Applying Preprocessing to Data (Filtering - Denoising - Tapering - Removing Instrument Response)
-- Learning about Wavelets and Wavelets Transforms 
-- PPSD Plots and Spectrograms + Analysis 
+* First encounter with Jupyter Notebooks and Anaconda 
+* First encounter with ObsPy and PyWavelets
+* New Scipy Commands
+* Downloading Waveform and Instrument Response Data from Kandilli
+* Applying Preprocessing to Data (Filtering - Denoising - Tapering - Removing Instrument Response)
+* Learning about Wavelets and Wavelets Transforms 
+* PPSD Plots and Spectrograms + Analysis 
 
 
 5- Implementing STA/LTA algorithm on Silivri Dataset using ObsPy
-- Further ObsPy Experience
-- Data Analysis
-- Detections and Parameter Tuning 
+* Further ObsPy Experience
+* Data Analysis
+* Detections and Parameter Tuning 
 
 
 6- “Selecting a Set of Tasks for ObsPy Learners” Part I & II
-- Chance to Review ObsPy
-- Chance to Interact with Other Members (and Perhaps Form New Friendships) and Help Some.
+* Chance to Review ObsPy
+* Chance to Interact with Other Members (and Perhaps Form New Friendships) and Help Some.
 
 
 7- Learning about Fourier Series and Transforms:
-- Basic Concepts Underlying Fourier Series and Transforms (Frequency Domain - Euler's Representation - Fourier Coefficients - FFT and DFT) from Videos, Textbook Chapters, and Webpages
-- Creating an Interactive Notebook
-- Reviewing SymPy and Matplotlib
-- In-Depth Research about Basic Topics
-- Developing a Special Interest 
+* Basic Concepts Underlying Fourier Series and Transforms (Frequency Domain - Euler's Representation - Fourier Coefficients - FFT and DFT) from Videos, Textbook Chapters, and Webpages
+* Creating an Interactive Notebook
+* Reviewing SymPy and Matplotlib
+* In-Depth Research about Basic Topics
+* Developing a Special Interest 
 
 
 8- Running and Installing ConvNetQuake:
-- First encounter with Virtual Machines and Linux OS / Ubuntu
-- Linux Command Line & Bash Shell Shortcuts
-- Creating and Working with Virtual Environments 
-- Cloning a GitHub Repository
-- Developing an Insight about Computer Functioning and Hardware Specifications (RAM - GPU - Disks - CPU)
-- Installing Specific Versions of Python and Python Libraries 
-- Using Python on a Terminal (Windows and Linux)
-- Learning about Parallel Computation Concepts through Encounters with CUDA and cuDNN
-- Debugging Basics with PDB 
+* First encounter with Virtual Machines and Linux OS / Ubuntu
+* Linux Command Line & Bash Shell Shortcuts
+* Creating and Working with Virtual Environments 
+* Cloning a GitHub Repository
+* Developing an Insight about Computer Functioning and Hardware Specifications (RAM - GPU - Disks - CPU)
+* Installing Specific Versions of Python and Python Libraries 
+* Using Python on a Terminal (Windows and Linux)
+* Learning about Parallel Computation Concepts through Encounters with CUDA and cuDNN
+* Debugging Basics with PDB 
 
 
 9- Learning Tensorflow 
-- CNN Noise Model (Early Stage of Project)
-- Tutorials:
-  - The Sequential Model 
-  - Training and Evaluation
-  - Save and Load
-  - Basic Image Classification 
-  - Basic Text Classification
-  - Regression 
+* CNN Noise Model (Early Stage of Project)
+* Tutorials:
+  * The Sequential Model 
+  * Training and Evaluation
+  * Save and Load
+  * Basic Image Classification 
+  * Basic Text Classification
+  * Regression 
 
 I kept on procrastinating in writing this report because I wanted it, to the furthest extent, to embody the feelings of gratefulness and content I have towards Earth-ML. 
 With that, I had to write one at some point. One additional thing I learned in this project is that when making a presentation or submitting a piece of work, I should conclude
