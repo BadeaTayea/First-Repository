@@ -17,17 +17,15 @@ In a layered earth, the horizonal spatial frequency is a constant function of de
 
 
 
-# Interactive Python Notebook:
+# Interactive Python Notebook:  
 The following python notebook has been designed to offer an interactive and a visual approach to forming a general, mathematical insight about Fourier Series and Transforms:
 [Fourier Series and Transforms - An Interactive, Visual Approach .ipynb]()
 
 
-# Learning Resources:
-
-
+# Learning Resources:  
 For further gaining insight and building general understanding, the following are good start-points for learning Fourier Series and Transforms:
 
-**<ins>Textbook Library:</ins>**
+**<ins>Textbook Library:</ins>**   
 [Textbooks Drive Folder]()
 
 **<ins>Videos:</ins>**
