@@ -108,10 +108,10 @@ but it also a highly dependable dataset that has sorted out signals. Here are th
   34.	trace_name 
   35.	trace_start_time 
 
-    -	Station Information:
-    -	Earthquake Characteristics:
-    -	Recorded Signal Information:
-        -	..
+  -	Station Information:
+  -	Earthquake Characteristics:
+  -	Recorded Signal Information:
+  -	..
         
         
 -	8 Non-EQ attributes (labels) for each noise seismogram:   
