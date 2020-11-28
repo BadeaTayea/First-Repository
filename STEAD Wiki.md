@@ -72,12 +72,47 @@ but it also a highly dependable dataset that has sorted out signals. Here are th
     -	More than 6200 waveforms contain information about the earthquake focal mechanisms.
 
 -	35 EQ attributes (labels) for each earthquake seismogram:    
+  1.	back_azimuth_deg 
+  2.	coda_end_sample 
+  3.	network_code 
+  4.	p_arrival_sample 
+  5.	p_status 
+  6.	p_travel_sec 
+  7.	p_weight 
+  8.	receiver_code A16
+  9.	receiver_elevation_m 
+  10.	receiver_latitude 
+  11.	receiver_longitude 
+  12.	receiver_type 
+  13.	s_arrival_sample 
+  14.	s_status 
+  15.	s_weight 
+  16.	snr_db 
+  17.	source_depth_km 
+  18.	source_depth_uncertainty_km 
+  19.	source_distance_deg 
+  20.	source_distance_km 
+  21.	source_error_sec 
+  22.	source_gap_deg
+  23.	source_horizontal_uncertainty_km 
+  24.	source_id 
+  25.	source_latitude 
+  26.	source_longitude 
+  27.	source_magnitude 
+  28.	source_magnitude_author 
+  29.	source_magnitude_type 
+  30.	source_mechanism_strike_dip_rake
+  31.	source_origin_time
+  32.	source_origin_uncertainty_sec 
+  33.	trace_category 
+  34.	trace_name 
+  35.	trace_start_time 
+
     -	Station Information:
-        -	..
     -	Earthquake Characteristics:
-        -	..
     -	Recorded Signal Information:
         -	..
+        
         
 -	8 Non-EQ attributes (labels) for each noise seismogram:   
     -	Recording Instrument Information:
