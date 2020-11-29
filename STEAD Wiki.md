@@ -1,10 +1,9 @@
 # STanford EArthquake Dataset (STEAD): A Global Data Set of Seismic Signals for AI
-STEAD is a high quality, large-scale, and global dataset of both local earthquake and noise signals recorded by seismic instruments. The dataset offers a a valuable training data set that could be utilized to increase AI-based algorithms’ efficiency in denoising, detection, phase picking, and classification/discrimination of seismic signals.
-The data set in its current state contains two categories:  
+STEAD is a high quality, large-scale, and global dataset of both local earthquake and noise signals recorded by seismic instruments. The data set offers a a valuable training data set that could be utilized to increase AI-based algorithms’ efficiency and accuracy in denoising, detection, phase picking, and classification/discrimination of seismic signals. The current data set is marked with having well-established control algorithms to check and eliminate inaccurately labeled signals.
 
-(1) local earthquake waveforms (recorded at “local” distances within 350 km of earthquakes)   
-(2) seismic noise waveforms that are free of earthquake signals. Together these data comprise ~1.2 million time series or more than 19,000 hours of seismic signal recordings. 
-Constructing such a large-scale database with reliable labels is a challenging task. 
+The data set in its current state contains two categories:    
+    1. local earthquake waveforms (recorded at “local” distances within 350 km of earthquakes)     
+    2. seismic noise waveforms that are free of earthquake signals. Together these data comprise ~1.2 million time series or more than 19,000 hours of seismic signal recordings. 
 
 This page presents the properties of the data set and describe how STEAD is constructed.
 
