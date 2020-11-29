@@ -47,16 +47,22 @@ The [STEAD Tutorial Notebook]() has been designed for the purpose of:
     -	More than 6200 waveforms contain information about the earthquake focal mechanisms.
 
 -	35 EQ attributes (labels) for each earthquake seismogram, including information on:    
-    - Station
-    - Earthquake Characteristics  
+    - Station and Recording Instrument
+    - Earthquake Characteristics
     - Recorded Signal
     - Seismogram Identification:
       - *source_id*: A unique identification number provided by monitoring network that can be used to retrieve the waveforms and metadata from established data centers.  
       - *trace_name*: A unique name containing station, network, recording time, and category code (‘‘EV’’ for earthquake and ‘‘NO’’ for noise data).  
       - *source_magnitude_author*: A unique name of the institute that calculated the magnitude.  
       - *network_code*: A unique code for the seismic monitoring network to which the recording instrument belongs. It can be used for retrieving either the waveform or the metadata directly from the monitoring network.  
-        
-        
+      
+    - Uncertainities Within Measurements:
+      - *source_horizontal_uncertainty_km*: The length of the largest projection of the three principal errors on a horizontal plane.
+      - *source_depth_uncertainty_km*: The largest projection of the three principal errors on a vertical line.
+      - *source_error_sec*: The RMS of the travel time residuals of the arrivals used for the origin computation.
+      - *source_origin_uncertainty_sec*:  Uncertainty in the *source_origin_time* label.
+      - *source_gap_deg*: The largest azimuthal gap between azimuthally adjacent stations (in degrees).
+      
 -	8 Non-EQ attributes (labels) for each noise seismogram:   
     -	Recording Instrument Information
     - Trace ID
