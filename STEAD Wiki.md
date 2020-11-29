@@ -2,8 +2,8 @@
 STEAD is a high quality, large-scale, and global dataset of both local earthquake and noise signals recorded by seismic instruments. The data set offers a a valuable training data set that could be utilized to increase AI-based algorithms’ efficiency and accuracy in denoising, detection, phase picking, and classification/discrimination of seismic signals. The current data set is marked with having well-established control algorithms to check and eliminate inaccurately labeled signals.
 
 The data set in its current state contains two categories:    
-    1. local earthquake waveforms (recorded at “local” distances within 350 km of earthquakes)     
-    2. seismic noise waveforms that are free of earthquake signals. Together these data comprise ~1.2 million time series or more than 19,000 hours of seismic signal recordings. 
+1. local earthquake waveforms (recorded at “local” distances within 350 km of earthquakes)     
+2. seismic noise waveforms that are free of earthquake signals. Together these data comprise ~1.2 million time series or more than 19,000 hours of seismic signal recordings. 
 
 This page presents the properties of the data set and describe how STEAD is constructed.
 
@@ -22,32 +22,7 @@ The [STEAD Tutorial Notebook]() has been designed for the purpose of:
 -	[STEAD Earth-ML Presentation – Part I]( https://docs.google.com/presentation/d/13jhe42NJQn1QsyUXNXp5QWaqLwrCthfaPavGnTvjPZA/edit?usp=sharing) 
 -	[STEAD Earth-ML Presentation – Part II]( https://docs.google.com/presentation/d/1QU-ae8mH4veYRjPqmNyOnXdOVa_A3ul5EYa7Y2IEhRM/edit?usp=sharing)
 
-
-
-
-## **Construction of STEAD**
-The way the STEAD is constructed is a very crucial part of comprehending what this dataset able to achieve. STEAD was not only capable of ensembling a huge dataset that constitutes more than 4 million phase arrival times of earthquake waveforms recorded by 3-component stations, but it also a highly dependable dataset that has sorted out signals. Here are the methods they used to classify and create an accurate dataset:
-### Waveforms:
-* To ensure every recorded waveform only includes one earthquake signal, STEAD used a fixed window(1 minute) around the phase arrival times.
-* They chose to start the window 5 to 10 seconds before the P arrival and end it 5 seconds after the S arrival, shortest.
-* All waveforms detrended and resampled to 100 Hz.
-* STEAD included additional labels like the end of earthquake signals.
-* Estimation of the end of earthquake signal based on the time series envelope and snr measured separately for each component as:
-Most of the seismograms have snr between 10 and 40 decibels. The snr can be used to identify data with one or two faulty channels or to select high-quality waveforms for tasks that are sensitive to waveform quality.
-### Errors:
-STEAD identifies a couple of errors and tries to estimate uncertainty levels. Most of them due to the lack of sensitivity of current detection algorithms or some preferences that network operators did when recording earthquakes. These errors are:
-* **Earthquake characterization errors:** errors in location, depth, origin time, and magnitude estimates of the earthquakes and can be due to errors in the arrival time picking, inaccurate velocity models, non-robust algorithms, number of recording stations, etc.
-    1.  STEAD lays out uncertainty levels in location, depth, origin time errors, and measures the quality of reported parameters.
-    1. The smaller the **source_gap_deg**, the more reliable is the calculated horizontal position of the earthquake.
-     1. **source_horizontal_uncertainty** varies from about 100m horizontally for the best-located events to tens of km for global events.
-   1. Due to the different depth determination methods, the error bars of the source depth can be huge. For example, for the shallow areas default depth is often used as 33 km, but in shallower areas, like mid-ocean ridges, the default depth is 5 or 10 km. Operators used default depths when depth is poorly constrained by seismic data.
-* **Errors in arrival time picks:** errors that are originating from inaccurate arrival time estimation or human errors in manual picks.
-   1. To replace the theoretical arrival times with more accurate picks, STEAD used PhaseNet, a deep-learning-based phase picker. They also used CRED to identify traces with no earthquake or with more than one earthquake.
-    1. Using these algorithms, STEAD detected uncatalogued earthquake signals and incorrect labels. These flaws made them reduce the size of the original waveform data set by 8%.
-   1. To ensure that the noise traces do not contain earthquake signal, they applied the same method of pre-processing and post-processing.
-   1. Unfortunately, the algorithms that are used in some of the seismic networks lack sensitivity. Overall, STEAD tries to ensure that there is no unrecorded earthquake in the catalog by applying this procedure.
-
-
+---
 
 ## STEAD in Numbers:
 
@@ -114,6 +89,37 @@ STEAD identifies a couple of errors and tries to estimate uncertainty levels. Mo
     -	60 second (6000 samples) in duration
         -	The time of first sample is given by *trace_start_time* in UTC, which is randomly selected to be between 5 and 10 seconds prior to the P-arrival time. 
 -	Most of the seismograms have SNR between 10 and 40 decibels
+
+
+
+---
+
+
+
+## **Construction of STEAD**
+The way STEAD is constructed is a very crucial part of comprehending what this dataset is able to achieve. STEAD is not only capable of ensembling a huge dataset that constitutes more than 4 million phase arrival times of earthquake waveforms recorded by 3-component stations, but it also is a highly dependable dataset that has sorted out signals. Here are the methods the authors of STEAD used to classify and create an accurate dataset:
+### Waveforms:
+* To ensure every recorded waveform only includes one earthquake signal, STEAD uses a fixed window(1 minute) around the phase arrival times.
+* The window is chosen 5 to 10 seconds before the P arrival and end it 5 seconds after the S arrival, shortest.
+* All waveforms are detrended and resampled to 100 Hz.
+* STEAD includes additional labels such as the end of earthquake signals.
+* Estimation of the end of earthquake signal is based on the time series envelope and snr measured separately for each component as:
+Most of the seismograms have snr between 10 and 40 decibels. The snr can be used to identify data with one or two faulty channels or to select high-quality waveforms for tasks that are sensitive to waveform quality.
+### Errors:
+STEAD identifies a couple of errors and tries to estimate uncertainty levels. Most of them are due to the lack of sensitivity of current detection algorithms or some preferences that network operators did when recording earthquakes. These errors are:
+* **Earthquake characterization errors:** Errors in location, depth, origin time, and magnitude estimates of the earthquakes and can be due to errors in the arrival time picking, inaccurate velocity models, non-robust algorithms, number of recording stations, etc.
+    1.  STEAD lays out uncertainty levels in location, depth, origin time errors, and measures the quality of reported parameters.
+    1. The smaller the ***source_gap_deg***, the more reliable is the calculated horizontal position of the earthquake.
+     1. ***source_horizontal_uncertainty*** varies from about 100m horizontally for the best-located events to tens of km for global events.
+   1. Due to the different depth determination methods, the error bars of the source depth can be huge. For example, for the shallow areas default depth is often used as 33 km, but in shallower areas, like mid-ocean ridges, the default depth is 5 or 10 km. Operators used default depths when depth is poorly constrained by seismic data.
+* **Errors in arrival time picks:** errors that are originating from inaccurate arrival time estimation or human errors in manual picks.
+   1. To replace the theoretical arrival times with more accurate picks, STEAD used PhaseNet, a deep-learning-based phase picker. CRED is also used to identify traces with no earthquake or with more than one earthquake.
+    1. Using these algorithms, STEAD detected uncatalogued earthquake signals and incorrect labels. These flaws made them reduce the size of the original waveform data set by 8%.
+   1. To ensure that the noise traces do not contain earthquake signal, the same method of pre-processing and post-processing is applied.
+   1. Unfortunately, the algorithms that are used in some of the seismic networks lack sensitivity. Overall, STEAD tries to ensure that there is no unrecorded earthquake in the catalog by applying this procedure.
+
+
+
 
 ---
 
