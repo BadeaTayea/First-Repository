@@ -55,3 +55,12 @@ For gaining further insight and building general understanding, the following ar
 - [An Interactive Guide To The Fourier Transform](https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
 
 - [Theoretical Significance of Fourier Analysis](https://www.reddit.com/r/math/comments/6lt659/theoretical_significance_of_fourier_analysis/)
+
+
+# Contributors to this Task:
+- Aleyna A.
+- Koray A. 
+- Kaan H. 
+- Zeynep O. 
+- Badie T.
+
