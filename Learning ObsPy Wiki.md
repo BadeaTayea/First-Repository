@@ -23,7 +23,12 @@ In seismology we generally distinguish between three separate types of data:
 3.	**Event Data:** Information about earthquakes.
 
 ## Downloading Data form KOERI:
+Use the following link to access global earthquake waveform datasets:
 -	[KOERI and EIDA Data Archives](http://eida.koeri.boun.edu.tr/webinterface/)
+
+### Video Tutorial:
+The following is a quick video tutorial that has been prepared to offer an   
+[Downloading Data form KOERI/EIDA Tutorial Video - Drive Link]()
 
 ### Links to Silivri and Random Datasets: 
 -	[Silivri Data]( https://drive.google.com/drive/folders/12hnk3YnKKY0n16ruvzAKAwbmHv-0LiHW)
