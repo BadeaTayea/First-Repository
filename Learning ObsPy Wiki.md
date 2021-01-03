@@ -27,8 +27,8 @@ Use the following link to access global earthquake waveform datasets:
 -	[KOERI and EIDA Data Archives](http://eida.koeri.boun.edu.tr/webinterface/)
 
 ### Video Tutorial:
-The following is a quick video tutorial that has been prepared to offer an   
-[Downloading Data form KOERI/EIDA Tutorial Video - Drive Link]()
+The following is a quick video tutorial that has been prepared to offer a visual guide to downloading data from KOERI:  
+-   [Downloading Data form KOERI/EIDA Tutorial Video - Drive Link]()
 
 ### Links to Silivri and Random Datasets: 
 -	[Silivri Data]( https://drive.google.com/drive/folders/12hnk3YnKKY0n16ruvzAKAwbmHv-0LiHW)
