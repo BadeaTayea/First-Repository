@@ -81,12 +81,12 @@ In seismology we generally distinguish between three separate types of data:
 ## Tasks & Practice:
 
 ### Task 1: 
-**<ins>Prerequisites (Tutorial Notebooks):</ins>**
+**<ins>Prerequisites (Tutorial Notebooks):</ins>**  
 -	[Introduction to ObsPy - Jupyter Notebook](https://github.com/boun-earth-ml/research/blob/master/Tutorials/ObsPy_Tutorial_03_07_20_Copy1.ipynb) 
 -	[Filters - Jupyter Notebook](https://github.com/boun-earth-ml/research/blob/master/Tutorials/Filters_Koray.ipynb)
 -	[Instrumental Response - Jupyter Notebook](https://github.com/boun-earth-ml/research/blob/master/Tutorials/Instrument_Response_23July2020.ipynb)
 
-**<ins>Task Instructions:</ins>**
+**<ins>Task Instructions:</ins>**  
 1.	Select any available day to read the [Silivri Data]( https://drive.google.com/drive/folders/12hnk3YnKKY0n16ruvzAKAwbmHv-0LiHW) from.
 2.	Merge all 3 given channels (HHN, HHE, HHZ) for the selected date, and plot the merged stream.
 3.	Create one-day plots for each of the three channels.
@@ -102,7 +102,7 @@ In seismology we generally distinguish between three separate types of data:
 13.	Visually compare the differences between the processed trace and the original raw trace using multiple subplots.
 
 
-**<ins>Expected Learning Outcomes:</ins>**
+**<ins>Expected Learning Outcomes:</ins>**   
 Going through this task, you should now be able to:
 -	Read, merge, slice, and select streams/traces.
 -	Plot streams, traces, and one-day graphs of traces.
@@ -112,18 +112,18 @@ Going through this task, you should now be able to:
 -	Understand and visualize the effects of removing instrument response from waveform traces.
 
 
-**<ins>Sample Solution Notebook:</ins>**
+**<ins>Sample Solution Notebook:</ins>**    
 [Learning ObsPy Part 1 - Jupyter Notebook]()
 
 
 ### Task 2: 
-**<ins>Prerequisites (Tutorial Notebooks):**</ins>
+**<ins>Prerequisites (Tutorial Notebooks):**</ins>   
 -	[Seismic Noise-EDA: First Pass - Jupyter Notebook](https://github.com/boun-earth-ml/research/blob/master/Tutorials/NoisedataEDAfirstpass_15-07-2020-Copy2.ipynb) 
 -	[Seismic Noise-EDA Examples - Jupyter Notebook](https://github.com/boun-earth-ml/research/blob/master/Tutorials/NoisedataEDAfirstpass_15-07-2020-Copy2.ipynb)
 -	[Wavelet Transforms - Jupyter Notebook](https://github.com/boun-earth-ml/research/blob/cd453f25761c274c63c8f288820f7616e214764b/Tutorials/Updated__Wavelet%20Transforms%20(WT)%20of%20Seismograms%20-%20EDA%20.ipynb)
 
-
-**<ins>Task Instructions:**</ins>
+ 
+**<ins>Task Instructions:**</ins>   
 1.	Download mseed/xml data from KOERI (check out the [Tutorial Video]() if you still haven’t!), or use any of Silivri’s Datasets.
 2.	Read the data acquired in the previous step, and select a single trace to work on. For convenience, work with data in a 5 minutes duration window (*.slice()* module could again be utilized here).
 3.	Apply different preprocessing techniques on selected trace (normalization – detrending - tapering).
@@ -137,18 +137,18 @@ Going through this task, you should now be able to:
 
 
 
-**<ins>Expected Learning Outcomes:**</ins>
+**<ins>Expected Learning Outcomes:**</ins>  
 -	Downloading data from KOERI. 
 -	Plotting spectrograms of earthquake waveforms.
 -	Plotting PPSDs of earthquake waveforms.
 -	Applying CWTs and DWTs on preprocessed waveform traces.
 
 
-**<ins>Sample Solution Notebook:</ins>**
+**<ins>Sample Solution Notebook:</ins>**   
 [Learning ObsPy Part 2 - Jupyter Notebook]()
 
 
-## Additional Comments:
-This page has been created for the purpose of introducing key concepts and commands within ObsPy in an organized fashion. Only some of the tutorials prepared by Earth-ML have been linked to this page. For learning more about ObsPy, check out all the tutorials prepared here: [](). Good Luck!
+## Additional Comments:  
+This page has been created for the purpose of introducing key concepts and commands within ObsPy in an organized fashion. Only some of the tutorials prepared by Earth-ML have been linked to this page. For learning more about ObsPy, check out all the tutorials prepared on this [Tutorials Page](https://github.com/boun-earth-ml/research/tree/master/Tutorials). Good Luck!
 
 
