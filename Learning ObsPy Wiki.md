@@ -32,7 +32,7 @@ The following is a quick video tutorial that has been prepared to offer an
 
 ### Links to Silivri and Random Datasets: 
 -	[Silivri Data]( https://drive.google.com/drive/folders/12hnk3YnKKY0n16ruvzAKAwbmHv-0LiHW)
--	[Some Random Datasets](https://drive.google.com/drive/folders/1sqXPkn9c_R9OIuD29r4w8MTBuHbth3jN?usp=sharing)###############
+-	[Some Random Datasets](https://drive.google.com/drive/folders/1sqXPkn9c_R9OIuD29r4w8MTBuHbth3jN?usp=sharing)
 
 
 ## Tutorials by Earth-ML :
