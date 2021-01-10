@@ -6,7 +6,7 @@ The purpose of this page is to:
 -	cover and apply methods and modules within ObsPy for analyzing real seismic data.
 -	check overall understanding through providing two tasks along with sample solution notebooks.
 
-## Quick guide to using this page:
+## Quick Guide to Using This Page:
 -	Go over the tutorials listed below.
 -	Read documentations of modules and functions on [ObsPy](https://docs.obspy.org/) along the way and whenever anything seems unclear.
 -	Try solving the two tasks at the bottom and checking up your performance through the provided solutions notebooks.
@@ -17,7 +17,7 @@ It provides parsers for common file formats and seismological signal processing 
 The goal of the ObsPy project is to facilitate rapid application development for seismology. 
 
 ## Data in Seismology:
-In seismology we generally distinguish between three separate types of data:
+In seismology, we generally distinguish between three separate types of data:
 1.	**Waveform Data:** The actual seismic waveforms as time series (amplitude vs time graphs).
 2.	**Station Data:** Information about the stations' operators, geographical locations, and the instrument's responses.
 3.	**Event Data:** Information about earthquakes.
