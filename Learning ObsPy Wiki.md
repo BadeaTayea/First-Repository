@@ -28,7 +28,7 @@ Use the following link to access global earthquake waveform datasets:
 
 ### Video Tutorial:
 The following is a quick video tutorial that has been prepared to offer a visual guide to downloading data from KOERI:  
--   [Downloading Data form KOERI/EIDA Tutorial Video - Drive Link]()
+-   [Downloading Data form KOERI/EIDA Tutorial Video - Drive Link](https://drive.google.com/file/d/1HfaIGmtdDszuxGfw2REHyVEiE-x6JHl5/view?usp=sharing)
 
 ### Links to Silivri and Random Datasets: 
 -	[Silivri Data]( https://drive.google.com/drive/folders/12hnk3YnKKY0n16ruvzAKAwbmHv-0LiHW)
@@ -118,7 +118,7 @@ Going through this task, you should now be able to:
 
 
 **<ins>Sample Solution Notebook:</ins>**    
-[Learning ObsPy Part 1 - Jupyter Notebook]()
+[Learning ObsPy Part 1 - Jupyter Notebook](https://drive.google.com/file/d/1i7bU_7kSHSI9Pl-fLkwuNPlBs6LbV6UB/view?usp=sharing)
 
 
 ### Task 2: 
@@ -150,7 +150,7 @@ Going through this task, you should now be able to:
 
 
 **<ins>Sample Solution Notebook:</ins>**   
-[Learning ObsPy Part 2 - Jupyter Notebook]()
+[Learning ObsPy Part 2 - Jupyter Notebook](https://drive.google.com/file/d/1DzysK8JMxXc8LzwlxqDn9WaYP319BSHV/view?usp=sharing)
 
 
 ## Additional Comments:  
