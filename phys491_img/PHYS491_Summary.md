@@ -144,6 +144,8 @@ y_test_5 = (y_test == 5)
   <img src=https://github.com/BadeaTayea/First-Repository/blob/master/phys491_img/classification/roc_curve.png/>
 </p>
 
+---
+
 # Optimization
 - **Notes:**
   - ***Gradient Descent:*** is a very generic optimization algorithm capable of finding optimal solutions to a wide range of problems.
@@ -295,16 +297,16 @@ for epoch in range(n_iterations):
   -  A good way to reduce overfitting is to ***regularize the model*** (i.e., to constrain it): the fewer degrees of freedom it has, the harder it will be for it to overfit the data.
   -  For a linear model, regularization is typically achieved by constraining the weights of the model.
   -  Three methods for constraining the weights:
-    - **Ridge Regression**
-    - **Lasso Regression**
-    - **Elastic Net**
+     - **Ridge Regression**
+     - **Lasso Regression**
+     - **Elastic Net**
 
 ### Ridge Regression
 - **Notes:**
   - ***Ridge Regression*** (also called ***Tikhonov regularization***) is a regularized version of Linear Regression: a regularization term is added to the cost function.
   - This forces the learning algorithm to not only fit the data but also keep the model weights as small as possible.
   - The regularization term should only be added to the cost function during training. Once the model is trained, the model’s performance is evaluated using the unregularized performance measure.
-  - The hyperparameter  α  controls how much the model be regularized.
+  - The ***hyperparameter  α***  controls how much the model be regularized.
     - If  α=0 , then Ridge Regression is just Linear Regression.
     - If  α  is very large, then all weights end up very close to zero and the result is a flat line going through the data’s mean.
 
@@ -375,6 +377,7 @@ def model(model_class, polynomial, alphas, **model_kargs):
   - **Ridge** is a good default, but if you suspect that only a few features are actually useful, you should prefer **Lasso** or **Elastic Net** since they tend to reduce the useless features’ weights down to zero as discussed.
 In general, **Elastic Net** is preferred over Lasso since Lasso may behave erratically when the number of features is greater than the number of training instances or when several features are strongly correlated.
 
+---
 
 # Support Vector Machines
 - **Notes:**
@@ -421,10 +424,98 @@ def plot_svc_decision_boundary(svm_clf, xmin, xmax):
 - An SVM classifier can be thought of as a model fitting the widest possible street (represented by the parallel dashed lines) between the classes. This is called ***large margin classification***.
 - Note: Adding more training instances “off the street” will not affect the decision boundary at all: it is fully determined (or “supported”) by the instances located on the edge of the street. These instances are called the ***support vectors***.
 
-## Soft
+## Hard Margin Classification
+- **Notes:** 
+  - If we strictly impose that all instances be off the street and on the right side, this is called ***hard margin classification***.
+  - There are two main issues with hard margin classification:
+    - It only works if the data is linearly separable.
+    - It is quite sensitive to outliers.
+
+<p align="center">
+  <img src="https://github.com/BadeaTayea/First-Repository/blob/master/phys491_img/svms/soft_margin_classification.png"/>
+</p>
+
+## Soft Margin Classification
+- **Notes:**
+  - The objective is to find a good balance between keeping the street as large as possible and limiting the margin violations (i.e., instances that end up in the middle of the street or even on the wrong side). This is called ***soft margin classification***.
+  - In Scikit-Learn’s SVM classes, we can control this balance using the ***C-parameter***: a smaller C value leads to a wider street but more margin violations.
+
+- **Code:**
+<pre>
+<b>
+from sklearn import datasets
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import LinearSVC
+
+iris = datasets.load_iris()
+X = iris["data"][:, (2, 3)]  # petal length, petal width
+y = (iris["target"] == 2).astype(np.float64)  # Iris virginica
+
+svm_clf = Pipeline([
+        ("scaler", StandardScaler()),
+        ("linear_svc", LinearSVC(C=1, loss="hinge", random_state=42)),
+    ])
+
+svm_clf.fit(X, y)
 
 
+scaler = StandardScaler()
+svm_clf1 = LinearSVC(C=1, loss="hinge", random_state=42)
+svm_clf2 = LinearSVC(C=100, loss="hinge", random_state=42)
 
+scaled_svm_clf1 = Pipeline([
+        ("scaler", scaler),
+        ("linear_svc", svm_clf1),
+    ])
+scaled_svm_clf2 = Pipeline([
+        ("scaler", scaler),
+        ("linear_svc", svm_clf2),
+    ])
+
+scaled_svm_clf1.fit(X, y)
+scaled_svm_clf2.fit(X, y)
+
+# Find support vectors (LinearSVC does not do this automatically)
+t = y * 2 - 1
+support_vectors_idx1 = (t * (X.dot(w1) + b1) < 1).ravel()
+support_vectors_idx2 = (t * (X.dot(w2) + b2) < 1).ravel()
+svm_clf1.support_vectors_ = X[support_vectors_idx1]
+svm_clf2.support_vectors_ = X[support_vectors_idx2]
+</b>
+</pre>
+
+
+## Nonlinear SVM Classification
+- **Notes:**
+  - Although linear SVM classifiers are efficient and work surprisingly well in many cases, many datasets are not even close to being linearly separable.
+  - One approach to handling nonlinear datasets is to add more features, such as polynomial features; in some cases this can result in a linearly separable dataset
+
+<p align="center">
+  <img src="https://github.com/BadeaTayea/First-Repository/blob/master/phys491_img/svms/nonlinear_svm.png"/>
+</p>
+
+- Application on the Moons Dataset:
+- **Code:**
+<pre>
+<b>
+from sklearn.datasets import make_moons
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import PolynomialFeatures
+
+polynomial_svm_clf = Pipeline([
+        ("poly_features", PolynomialFeatures(degree=3)),
+        ("scaler", StandardScaler()),
+        ("svm_clf", LinearSVC(C=10, loss="hinge", random_state=42))
+    ])
+
+polynomial_svm_clf.fit(X, y)
+</b>
+</pre>
+
+<p align="center">
+  <img src="https://github.com/BadeaTayea/First-Repository/blob/master/phys491_img/svms/moons_classification.png"/>
+</p>
 
 # SciKit Learn - Function/Class Documentation
 - **Classification:**
