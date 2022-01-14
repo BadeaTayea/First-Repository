@@ -485,6 +485,9 @@ svm_clf2.support_vectors_ = X[support_vectors_idx2]
 </b>
 </pre>
 
+<p align="center">
+  <img src="https://github.com/BadeaTayea/First-Repository/blob/master/phys491_img/svms/download.png"/>
+</p>
 
 ## Nonlinear SVM Classification
 - **Notes:**
@@ -517,11 +520,6 @@ polynomial_svm_clf.fit(X, y)
   <img src="https://github.com/BadeaTayea/First-Repository/blob/master/phys491_img/svms/moons_classification.png"/>
 </p>
 
-# SciKit Learn - Function/Class Documentation
-- **Classification:**
-- **SVM:**
-- **Regression:**
-- **Optimization:**
 
 # Main Reference:
 - Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems by Aurélien Géron 
